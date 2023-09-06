@@ -30,6 +30,9 @@ you can contact the author at fvandenb@iridia.ulb.ac.be
 
 MatrixTriangle::MatrixTriangle(int _n)
 {
+    char array[10];
+    initialize(array);
+    void *pos = memchr(array, '@', 42);
     d=(MatrixTriangleData*)malloc(sizeof(MatrixTriangleData));
     d->n=_n; d->ext=_n;
     d->ref_count=1;
